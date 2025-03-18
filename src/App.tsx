@@ -22,19 +22,23 @@ function App() {
 
   return (
     <>
-      <div className="input-group">
-        <span className="input-group-text">Nome da cidade</span>
-        <textarea
-          id="cityName"
-          className="form-control"
-          aria-label="City"
-          onKeyDown={(e) => {
-            if (e.key === "Enter") {
-              getWeather();
-            }
-          }}
-        ></textarea>
-        <Result data={apiResponse} />
+      <div>
+        <div className="input-group">
+          <span className="input-group-text">Nome da cidade</span>
+          <textarea
+            id="cityName"
+            className="form-control"
+            aria-label="City"
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                getWeather();
+              }
+            }}
+          ></textarea>
+        </div>
+        <div>
+          <Result data={apiResponse} />
+        </div>
       </div>
     </>
   );
